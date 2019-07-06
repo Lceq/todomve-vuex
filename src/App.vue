@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section class="todoapp">
+      <!-- 页面中使用 -->
+      <addtodo></addtodo>
+      <todo></todo>
+      <filtertodo></filtertodo>
+    </section>
+    <footer class="info">
+      <p>Double-click to edit a todo</p>
+      <!-- Remove the below line ↓ -->
+      <p>
+        Template by
+        <a href="http://sindresorhus.com">Sindre Sorhus</a>
+      </p>
+      <!-- Change this out with your name and url ↓ -->
+      <p>
+        Created by
+        <a href="http://todomvc.com">you</a>
+      </p>
+      <p>
+        Part of
+        <a href="http://todomvc.com">TodoMVC</a>
+      </p>
+    </footer>
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// 导入
+import addtodo from "./components/AddTodo.vue";
+import todo from "./components/Todo.vue";
+import filtertodo from "./components/FilterTodo.vue";
 export default {
-  name: 'app',
+  // 注册
   components: {
-    HelloWorld
+    addtodo,
+    todo,
+    filtertodo
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
